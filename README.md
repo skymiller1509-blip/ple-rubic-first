@@ -15,10 +15,11 @@ preinstalled, so the check runs here in the cloud instead.
   First layer (the agent writes a licensed reviewer's checklist, solves
   against it, then self-grades with evidence). Real entry model:
   `google-cloud/claude-opus-5-5`. For the free smoke check only,
-  `submission.yaml` temporarily uses `gemini/gemini-3.6-flash` — revert
-  before the real entry. (3.8-flash 503'd on high demand in runs 1-2
-  and again in the 16:15 WAT retry; 2.5-flash is retired, HTTP 404.
-  3.6-flash is the older free Flash, not deprecated.) The submission repo is `my-harness` on
+  `submission.yaml` temporarily uses `gemini/gemini-3.5-flash-lite` —
+  revert before the real entry. (3.8-flash 503'd on high demand in
+  runs 1-2 and again in the 16:15 WAT retry; 2.5-flash is retired,
+  HTTP 404; 3.6-flash 503'd too in the 16:33 WAT run. 3.5-flash-lite
+  is the last free Flash variant.) The submission repo is `my-harness` on
   its own; this repo is only the check vehicle.
 - `.github/workflows/kit-check.yml` — runs `kit check` with a paid
   Anthropic key. `.github/workflows/kit-check-gemini.yml` — runs it with
