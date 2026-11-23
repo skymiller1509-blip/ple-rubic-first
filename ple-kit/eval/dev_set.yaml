@@ -1,0 +1,255 @@
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# The public dev set, graded like the leaderboard. Run it with `python eval/run.py <submission>`, or a subset
+# with `--tasks id,id`. Each task is a Harbor task under `tasks/<id>/` in the Hugging Face dataset `tasks_repo`,
+# downloaded by `eval/run.py` from the dataset's latest commit. `tasks_revision` and each task's `sha256` record
+# the dataset commit and folder digest at export time. `deliverables`: container paths read by the task's grader
+# (directories end with `/`), exported as described in `docs/artifacts.md`. `final_message`: whether the grader
+# also reads the final message.
+tasks_repo: google/physical-engineerings-last-exam
+tasks_revision: b3857a3fea39a695e18f845d4a88f29442e96e75
+tasks:
+- id: data-hall-mep-routing
+  title: Clash-free MEP routing through a data hall
+  domain: Mechanical engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/app/files/dc_model__hall_seed000_d000__mep_routing/output/solution.py]
+  final_message: false
+  sha256: 4f11a0a62f11c2b0ea6347d7281a6297eed83087d1ae83d5cc42a9dd79f1c940
+- id: fire-test-validation-memo
+  title: Validation memo for a fire-resistance simulation against its test
+  domain: Mechanical engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/app/files/]
+  final_message: true
+  sha256: fbac4a6d391bb63a001726e45ab139db862495e09c27401dedc1b81b7e4d6b23
+- id: data-hall-mep-routing-offset
+  title: Clash-free MEP routing through a data hall on an offset structural grid
+  domain: Mechanical engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/app/files/dc_model__hall_seed005_d100__mep_routing/output/solution.py]
+  final_message: false
+  sha256: 9c208ede28b2d889b0242f7a594cd8f6c1f444a86e811695f01326a0ab49ede6
+- id: eor-review-corrections
+  title: Issue an engineer-of-record review's corrections to two bid packages
+  domain: Structural engineering
+  grading: checks-judge
+  time_limit_min: 360
+  deliverables: [/filesystem/dc_structural__eor_revision__blind/output/submission.zip, /filesystem/filesystem/dc_structural__eor_revision__blind/output/submission.zip]
+  final_message: false
+  sha256: a7287f122968564ce05341f6bcddaf03e38f327809f8eb8fb35035234b3a8ca9
+- id: foundation-strategy
+  title: Spread footings or aggregate piers for six data-campus building pads
+  domain: Civil engineering
+  grading: checks-judge
+  time_limit_min: 360
+  deliverables: [/filesystem/dc_structural__foundation_strategy__blind/output/submission.zip, /filesystem/filesystem/dc_structural__foundation_strategy__blind/output/submission.zip]
+  final_message: false
+  sha256: 413ab29c0445d25ea74b8ed7838e2dca950aa47ee11add08aea80d9ed111fdce
+- id: landscape-sheet-revision
+  title: Street-tree revision worked into a landscape resubmittal
+  domain: Civil engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/app/files/]
+  final_message: true
+  sha256: 70702047d63b972ccfff45b776f9abb1c0f11f01d2658173a4768aba1394e03f
+- id: data-center-site-model
+  title: Feasible data-center site design as an IFC model
+  domain: Civil engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/app/files/frontier__DCBim__p6_002/submission/model.ifc]
+  final_message: false
+  sha256: 6fb3dedb763e9328bef5abd4feef73a22a6b5eb11fbf0e15779e3a82a67640b1
+- id: engineers-estimate-check
+  title: Engineer's estimate checked before a bond conversation
+  domain: Civil engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: 35852ade3d40329a0f14b7a8a91acb7ff04db4a912305570c2a59352dd427866
+- id: footing-settlement-verification
+  title: Settlement verification of a building block's spread footings on clay
+  domain: Civil engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: 96124d80a625994dd5f971ed422752c6b06622806cf252faec31202a2ceb1d79
+- id: solar-supplemental-review
+  title: Supplemental interconnection review memo for a solar project
+  domain: Electrical engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: 4bdca16af73ac60f1b5ad92b0bee8b2391b9781c72ddca5807bafb75e90c29fb
+- id: solar-witness-test-package
+  title: Witness-test scope and schedule for municipal solar arrays
+  domain: Electrical engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: e747710ee729f2c97c54b6b0a1c550c6b51100ab58b6f142ee062c2538edbed0
+- id: frame-extension-method
+  title: Method package for a frame extension over an occupied floor
+  domain: Civil engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/field_eng__constructability_4d__blind/output/submission.zip, /filesystem/filesystem/field_eng__constructability_4d__blind/output/submission.zip]
+  final_message: false
+  sha256: a80d7477c8be2ad8b36c13a20f8f9c9a7e5d2d43b1f35ba8b4164477e7f04745
+- id: fire-solve-convergence
+  title: Disposition of a non-converging fire-simulation solve
+  domain: Mechanical engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: 32c0619972e1e53f3e300f83b8e5dfa014da4e65f6f8e2b61c319938695e8159
+- id: les-mesh-resolution
+  title: Mesh-resolution basis for an LES fire case
+  domain: Mechanical engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: 0471fe49441496ed307eb98df8a9b9b61ec6d673b35fe15ba1b3f1dfeb1cf875
+- id: mv-conveyance-study
+  title: Conveyance study for a 13.8 kV site distribution
+  domain: Electrical engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/final_batch4__electrical_task12_conveyance_study__blind/output/submission.zip]
+  final_message: false
+  sha256: b127d54d2a9e07ef6c954743b8d8d0156832513915253699933a7e56438d7ec1
+- id: data-hall-device-takeoff
+  title: Device takeoff and priced bill of materials for a data hall
+  domain: Electrical engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/final_batch4__electrical_task17_ec_0205_d100__blind/output/submission.zip]
+  final_message: false
+  sha256: e3c14d5bccebb858662865eae8a7704173a857e54674bb8546e6849e79d34c11
+- id: division-26-specifications
+  title: Division 26 project specifications for an Army facility
+  domain: Electrical engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/final_batch4__electrical_task8_electrical_specs__blind/output/submission.zip]
+  final_message: false
+  sha256: 16408f68a7aa2ae650c4a8dba25a2e82482c9d254bbd14d5d5e58f645cf51e49
+- id: heat-rejection-life-cycle-cost
+  title: Life-cycle cost of a condenser-water heat rejection replacement
+  domain: Mechanical engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/final_batch4__mechanical_task3_ct_heat_lcc__blind/output/submission.zip]
+  final_message: false
+  sha256: a370ce56d0a314e01a6e30bf43284bfd90ae09febb21915cf4b35988f0f344b5
+- id: cooling-water-flush-plan
+  title: Flushing and passivation of a data hall's process cooling water
+  domain: Mechanical engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/final_batch4__mechanical_task5_pcw_flush_mop__blind/output/submission.zip]
+  final_message: false
+  sha256: 4a1222e5abc2139a2fb9cff3de7c5bf30a16635d05ce9c86b3461323cdc87729
+- id: wind-diaphragm-shear
+  title: Roof diaphragm shears and shear-wall loads for wind
+  domain: Structural engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/final_batch4__structural_task5_wind_diaphragm_shear__blind/output/submission.zip]
+  final_message: false
+  sha256: 848ac589c41d55ffcd364b6fef9f1dff196c3cc6067a2e630ea0807c818fc5ef
+- id: seismic-diaphragm-shear
+  title: Seismic diaphragm shears and shear-wall loads
+  domain: Structural engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/final_batch4__structural_task6_seismic_diaphragm_shear__blind/output/submission.zip]
+  final_message: false
+  sha256: b0f8253ef303f57e86c249fb2d5e893731d39829b89a5601c913d77a32d386d2
+- id: roof-deck-design
+  title: Roof deck design for gravity and lateral loads
+  domain: Structural engineering
+  grading: checks
+  time_limit_min: 360
+  deliverables: [/filesystem/final_batch4__structural_task7_roof_deck_design__blind/output/submission.zip]
+  final_message: false
+  sha256: 37643fef0fb323f7447f248c9f2716c055bc23def1a6d7a639361543231715b1
+- id: fill-compaction-acceptance
+  title: Acceptance of slab-on-grade fill compaction testing
+  domain: Civil engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: 5dcaf60aa58986d91b4b13f2109f7f0aa888c76bb996c7bf934d9c7fa000de84
+- id: shoring-design-verification
+  title: Verification of a revised shoring design ahead of an excavation
+  domain: Civil engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: 0748e5de15dccd8c77d4f2cf94f69aebcfb60edad93c0e2ab03eb10c9eeced32
+- id: emergency-spillway-check
+  title: Emergency spillway check behind a plan-check comment
+  domain: Civil engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: b20319afb3eae5714afa4c9f7251e9539ee6b81cba12b713e144ae0788972500
+- id: pre-application-capacity-response
+  title: Response to a pre-application request for feeder capacity
+  domain: Electrical engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: e210708581cb87d0f92c6bf90816774e067edd9b0302a7f452efa627af2e581d
+- id: permission-to-operate-memo
+  title: Permission-to-operate memo for an office complex's PV system
+  domain: Electrical engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: bc98ef15469c7082793eb0b8adfc319d020b7bafbc6e8b571e7932a631fcb4cd
+- id: backfeed-energization-reply
+  title: Reply on a community solar site's backfeed energization date
+  domain: Electrical engineering
+  grading: rubric
+  time_limit_min: 360
+  deliverables: [/filesystem/, /app/output/, /app/tools/.apps_data/]
+  final_message: true
+  sha256: 6c0f4273546bcf0fa6e311f7667e133b582f87520918e08a586e1e94c041a656
+- id: lv-cable-sizing
+  title: Low-voltage wire schedule with voltage drop and duct-bank ampacity
+  domain: Electrical engineering
+  grading: checks-judge
+  time_limit_min: 360
+  deliverables: [/filesystem/electrical__lv_cable_sizing__blind/output/submission.zip, /filesystem/filesystem/electrical__lv_cable_sizing__blind/output/submission.zip]
+  final_message: false
+  sha256: a0d86bb4f1d6b635bdbc93fdb0747289b473ea9795e59999303f844886aacc5e
