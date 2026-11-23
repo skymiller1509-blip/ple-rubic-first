@@ -13,7 +13,7 @@
 # limitations under the License.
 
 name: pi-opus
-model_api: gemini/gemini-3.6-flash  # TEMPORARY for the free smoke check only; real entry uses google-cloud/claude-opus-5-5 (3.8-flash 503'd on high demand 3x; 2.5-flash retired, HTTP 404; 3.6-flash is the older free Flash, not deprecated)
+model_api: gemini/gemini-3.5-flash-lite  # TEMPORARY for the free smoke check only; real entry uses google-cloud/claude-opus-5-5 (3.8-flash and 3.6-flash both 503'd on high demand; 2.5-flash retired, HTTP 404; 3.5-flash-lite is the last free Flash variant)
 install: >-
   npm ci --prefix {src} --no-fund --no-audit
   && uv venv --python 3.12 /opt/harness/venv
