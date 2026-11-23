@@ -15,8 +15,9 @@ preinstalled, so the check runs here in the cloud instead.
   First layer (the agent writes a licensed reviewer's checklist, solves
   against it, then self-grades with evidence). Real entry model:
   `google-cloud/claude-opus-5-5`. For the free smoke check only,
-  `submission.yaml` temporarily uses `gemini/gemini-3.8-flash` — revert
-  before the real entry. The submission repo is `my-harness` on
+  `submission.yaml` temporarily uses `gemini/gemini-2.5-flash` — revert
+  before the real entry. (First tried `gemini-3.8-flash`; Google
+  returned 503 high demand on both runs 2026-11-23.) The submission repo is `my-harness` on
   its own; this repo is only the check vehicle.
 - `.github/workflows/kit-check.yml` — runs `kit check` with a paid
   Anthropic key. `.github/workflows/kit-check-gemini.yml` — runs it with

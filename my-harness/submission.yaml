@@ -13,7 +13,7 @@
 # limitations under the License.
 
 name: pi-opus
-model_api: gemini/gemini-3.8-flash  # TEMPORARY for the free smoke check only; real entry uses google-cloud/claude-opus-5-5
+model_api: gemini/gemini-2.5-flash  # TEMPORARY for the free smoke check only; real entry uses google-cloud/claude-opus-5-5 (was gemini-3.8-flash; Google returned 503 high demand on 2026-11-23, runs 1-2)
 install: >-
   npm ci --prefix {src} --no-fund --no-audit
   && uv venv --python 3.12 /opt/harness/venv
